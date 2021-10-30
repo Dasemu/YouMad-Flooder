@@ -14,6 +14,7 @@ jobs:
       - run: codespell --ignore-words-list=ans
       - run: flake8 . --count --max-complexity=19 --ignore=E501,W605 --show-source --statistics
       - run: isort --check-only --profile black .
+      - run: sudo apt-get update
       - run: sudo apt-get install libespeak-dev portaudio19-dev
       - run: pip install -r requirements.txt
       - run: mkdir --parents --verbose .mypy_cache
